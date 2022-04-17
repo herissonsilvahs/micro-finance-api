@@ -1,7 +1,7 @@
 {
-  "name": "setup_nodejs_typescript",
+  "name": "micro-finance-api",
   "version": "0.0.1",
-  "description": "Simple setup nodejs with typescript",
+  "description": "Simple api",
   "main": "index.js",
   "author": "Herisson Silva",
   "license": "MIT",
