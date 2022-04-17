@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "outDir": "build",
-    "rootDir": "./src",
+    "rootDirs": ["./src/**/*", "./e2e-tests/**/*"],
     "sourceMap": false,
     "baseUrl": "./",
     "paths": {
@@ -17,8 +17,9 @@
     },
     "typeRoots": [
       "./node_modules/@types",
-      "./src/@types"
+      "./src/@types",
+      "./e2e-tests/@types"
     ],
   },
-  "exclude": ["node_modules", "**/*.spec.js"]
+  "exclude": ["node_modules", "**/*.spec.js", "jest.config.js"]
 }

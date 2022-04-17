@@ -3,6 +3,6 @@ module.exports = {
   ...rootConfig,
   rootDir: '..',
   displayName: 'end2end-tests',
-  setupFilesAfterEnv: ['<rootDir>/test/jest-setup.ts'],
-  testMatch: ['<rootDir>/test/**/*.test.ts']
+  setupFilesAfterEnv: ['<rootDir>/e2e-tests/jest-setup.ts'],
+  testMatch: ['<rootDir>/e2e-tests/**/*.test.ts']
 }
