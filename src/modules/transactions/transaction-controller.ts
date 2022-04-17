@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express'
-import TransactionService from './transaction-service';
+import TransactionService from './transaction-service'
 const transactionRoutes = Router()
 
 interface iSearchParams {
@@ -9,7 +9,6 @@ interface iSearchParams {
 }
 
 class TransactionController {
-
   private readonly transactionService = new TransactionService()
 
   create = async (req: Request, res: Response): Promise<void> => {
@@ -26,11 +25,14 @@ class TransactionController {
     const params: iSearchParams = {
       limit: req.params?.limit,
       page: req.params?.page,
-      query: req.params?.query
+      query: req.params?.query,
     }
 
-    const result = await this.transactionService
-      .search(params.page, params.limit, params.query)
+    const result = await this.transactionService.search(
+      params.page,
+      params.limit,
+      params.query,
+    )
 
     res.status(200).json(result)
   }

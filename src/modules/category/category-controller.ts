@@ -1,4 +1,4 @@
-import { iCategory } from './db/models/Category';
+import { iCategory } from './db/models/Category'
 import Category from './db/models/Category'
 import { Router } from 'express'
 const categoryRoutes = Router()

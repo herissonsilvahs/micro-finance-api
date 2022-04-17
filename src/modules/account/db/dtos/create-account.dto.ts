@@ -5,10 +5,10 @@ export class CreateAccountDto {
   name!: string
 
   @IsNotEmpty()
-	initialBalance!: number
+  initialBalance!: number
 
   @IsNotEmpty()
-	type!: string
+  type!: string
 
   @IsNotEmpty()
   institution!: string

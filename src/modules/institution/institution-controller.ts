@@ -1,9 +1,8 @@
-import InstitutionService from './institution-service';
+import InstitutionService from './institution-service'
 import { Router, Request, Response } from 'express'
 const institutionRoutes = Router()
 
 class InstitutionController {
-
   private readonly institutionService = new InstitutionService()
 
   create = async (req: Request, res: Response): Promise<void> => {

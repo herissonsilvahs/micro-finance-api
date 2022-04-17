@@ -1,4 +1,4 @@
-import supertest from "supertest";
+import supertest from 'supertest'
 
 describe('Transaction functional tests', () => {
   it('should list transactions', async () => {

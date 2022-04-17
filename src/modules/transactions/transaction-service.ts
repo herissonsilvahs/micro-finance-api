@@ -1,6 +1,6 @@
-import AccountService from '../account/account-service';
-import CreateTransactionDto from './db/dtos/create-transaction.dto';
-import { iTransaction, Transaction } from './db/models/Transaction';
+import AccountService from '../account/account-service'
+import CreateTransactionDto from './db/dtos/create-transaction.dto'
+import { iTransaction, Transaction } from './db/models/Transaction'
 class TransactionService {
   private readonly accountService = new AccountService()
 
@@ -8,10 +8,10 @@ class TransactionService {
     const hasAccountUpdated = await this.accountService.updateBalance(
       transactionDto.account,
       transactionDto.value,
-      transactionDto.type
+      transactionDto.type,
     )
 
-    if (!hasAccountUpdated) throw new Error('Account not updated!');
+    if (!hasAccountUpdated) throw new Error('Account not updated!')
 
     const transactionCreated = await Transaction.create(transactionDto)
     console.log('LOG TRANSACTION CREATED: ', transactionCreated)
@@ -22,11 +22,11 @@ class TransactionService {
     const limitParsed = Number(limit)
     const pageParsed = Number(page)
     const result = await Transaction.find({
-      name: { $regex: query, $options: 'i' }
+      name: { $regex: query, $options: 'i' },
     })
       .populate({
         path: 'account',
-        populate: ['institution']
+        populate: ['institution'],
       })
       .populate('category')
       .skip((pageParsed - 1) * limitParsed)

@@ -1,9 +1,9 @@
-import { IsNotEmpty } from "class-validator"
+import { IsNotEmpty } from 'class-validator'
 
 export default class CreateInstitutionDto {
   @IsNotEmpty()
-  name!: string;
+  name!: string
 
   @IsNotEmpty()
-  color!: string;
+  color!: string
 }

@@ -7,7 +7,7 @@ import routes from './app.routes'
 const PORT = process.env.PORT || 3000
 
 export class Server {
-  app: Express;
+  app: Express
   constructor() {
     this.app = express()
   }
