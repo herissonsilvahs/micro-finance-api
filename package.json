@@ -6,7 +6,11 @@
   "author": "Herisson Silva",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpileOnly --ignore-watch node_modules --no-notify src/server.ts"
+    "build": "yarn tsc",
+    "start": "yarn build && ts-node ./src/server.ts",
+    "start:dev": "nodemon",
+    "eslint:fix": "eslint --fix",
+    "test": "jest"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
