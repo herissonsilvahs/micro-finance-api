@@ -1,5 +1,5 @@
-# setup_nodejs_typescript
-Base setup for projects nodejs, express, typescript
+# Micro Finance API
+Base api application with my structure
 
 #### start with dev mode:
 ```bash
