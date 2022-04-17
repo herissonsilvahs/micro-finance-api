@@ -2,15 +2,16 @@
   "name": "micro-finance-api",
   "version": "0.0.1",
   "description": "Simple api",
-  "main": "index.js",
+  "main": "index.ts",
   "author": "Herisson Silva",
   "license": "MIT",
   "scripts": {
     "build": "yarn tsc",
-    "start": "yarn build && ts-node ./src/server.ts",
+    "start": "yarn build && ts-node ./src/index.ts",
     "start:dev": "nodemon",
     "eslint:fix": "eslint --fix",
-    "test": "jest"
+    "test": "jest",
+    "e2e-test": "jest --projects ./e2e-tests --runInBand --forceExit"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
